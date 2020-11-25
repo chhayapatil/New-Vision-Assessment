@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServiceCallModelStoreContainer" CdmEntityContainer="ServiceCallEntities">
+    <EntitySetMapping Name="Service_Activity">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Activity">
+        <MappingFragment StoreEntitySet="Service_Activity">
+          <ScalarProperty Name="Activity_ID" ColumnName="Activity_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Screen_Table" ColumnName="Screen/Table" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Company">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Company">
+        <MappingFragment StoreEntitySet="Service_Company">
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email_ID_For_Display" ColumnName="Email_ID_For_Display" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Customer">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Customer">
+        <MappingFragment StoreEntitySet="Service_Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Employee">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Employee">
+        <MappingFragment StoreEntitySet="Service_Employee">
+          <ScalarProperty Name="Employee_id" ColumnName="Employee_id" />
+          <ScalarProperty Name="Emplyoyee_Name" ColumnName="Emplyoyee_Name" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Date_Of_Joining" ColumnName="Date_Of_Joining" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Soft_Delete" ColumnName="Soft_Delete" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Location_Tracking">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Location_Tracking">
+        <MappingFragment StoreEntitySet="Service_Location_Tracking">
+          <ScalarProperty Name="Location_Tracking_ID" ColumnName="Location_Tracking_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_Ticket">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_Ticket">
+        <MappingFragment StoreEntitySet="Service_Ticket">
+          <ScalarProperty Name="Ticket_ID" ColumnName="Ticket_ID" />
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Assigned_To" ColumnName="Assigned_To" />
+          <ScalarProperty Name="Ticket_Type" ColumnName="Ticket_Type" />
+          <ScalarProperty Name="Ticket_Creation_Date" ColumnName="Ticket_Creation_Date" />
+          <ScalarProperty Name="Narration" ColumnName="Narration" />
+          <ScalarProperty Name="Assigned_Date" ColumnName="Assigned_Date" />
+          <ScalarProperty Name="Call_Attended_Date" ColumnName="Call_Attended_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Narration_By_Engineer" ColumnName="Narration_By Engineer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service_User_Access_Table">
+      <EntityTypeMapping TypeName="ServiceCallModel.Service_User_Access_Table">
+        <MappingFragment StoreEntitySet="Service_User_Access_Table">
+          <ScalarProperty Name="Access_ID" ColumnName="Access_ID" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Add_Ticket" ColumnName="Add_Ticket" />
+          <ScalarProperty Name="Close_Ticket" ColumnName="Close_Ticket" />
+          <ScalarProperty Name="Assign_Ticket" ColumnName="Assign_Ticket" />
+          <ScalarProperty Name="Reports" ColumnName="Reports" />
+          <ScalarProperty Name="AMC" ColumnName="AMC" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Location_Tracking" ColumnName="Location_Tracking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

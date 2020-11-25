@@ -1,0 +1,169 @@
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ServiceCallApplication.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ServiceCallApplication.pdb
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Antlr3.Runtime.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.AspNet.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.Core.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\EntityFramework.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.Edm.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.OData.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.Infrastructure.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Newtonsoft.Json.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Net.Http.Formatting.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Spatial.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Helpers.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.OData.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.WebHost.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Mvc.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Optimization.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Razor.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Deployment.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Razor.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\WebGrease.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.Data.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.WebData.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\EntityFramework.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Newtonsoft.Json.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Net.Http.Formatting.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Helpers.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.WebHost.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Mvc.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Razor.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Deployment.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Razor.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.Data.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.WebData.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.AspNet.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.Core.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.OData.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.Edm.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.OData.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\System.Spatial.xml
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\de\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\es\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\it\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\de\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\es\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\fr\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\it\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ja\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ko\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\ru\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\System.Spatial.resources.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\obj\Debug\ServiceCallApplication.dll
+D:\Minal\ServiceCallApplication\ServiceCallApplication\obj\Debug\ServiceCallApplication.pdb
+D:\Minal\ServiceCallApplication\ServiceCallApplication\obj\Debug\ServiceCallApplication.csprojResolveAssemblyReference.cache
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ServiceCallApplication.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ServiceCallApplication.pdb
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Antlr3.Runtime.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.AspNet.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.Core.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\EntityFramework.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.Edm.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.OData.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.Infrastructure.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Newtonsoft.Json.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Net.Http.Formatting.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Spatial.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Helpers.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.OData.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.WebHost.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Mvc.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Optimization.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Razor.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Deployment.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Razor.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\WebGrease.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.Data.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.WebData.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\EntityFramework.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Newtonsoft.Json.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Net.Http.Formatting.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Helpers.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.WebHost.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Mvc.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Razor.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Deployment.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.WebPages.Razor.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.Data.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\WebMatrix.WebData.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.AspNet.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.Core.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OAuth.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Web.Http.OData.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.Edm.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\Microsoft.Data.OData.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\System.Spatial.xml
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\de\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\es\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\it\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\de\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\es\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\fr\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\it\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ja\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ko\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\ru\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hans\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\bin\zh-Hant\System.Spatial.resources.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\obj\Debug\ServiceCallApplication.dll
+D:\Minal\New Vision\ServiceCallApplication\ServiceCallApplication\obj\Debug\ServiceCallApplication.pdb

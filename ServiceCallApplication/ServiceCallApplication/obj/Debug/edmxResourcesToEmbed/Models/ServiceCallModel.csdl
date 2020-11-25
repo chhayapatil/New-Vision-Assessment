@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiceCallModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ServiceCallEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Service_Activity" EntityType="ServiceCallModel.Service_Activity" />
+    <EntitySet Name="Service_Company" EntityType="ServiceCallModel.Service_Company" />
+    <EntitySet Name="Service_Customer" EntityType="ServiceCallModel.Service_Customer" />
+    <EntitySet Name="Service_Employee" EntityType="ServiceCallModel.Service_Employee" />
+    <EntitySet Name="Service_Location_Tracking" EntityType="ServiceCallModel.Service_Location_Tracking" />
+    <EntitySet Name="Service_Ticket" EntityType="ServiceCallModel.Service_Ticket" />
+    <EntitySet Name="Service_User_Access_Table" EntityType="ServiceCallModel.Service_User_Access_Table" />
+    <AssociationSet Name="FK__Service_T__Custo__799DF262" Association="ServiceCallModel.FK__Service_T__Custo__799DF262">
+      <End Role="Service_Customer" EntitySet="Service_Customer" />
+      <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service_L__User___76C185B7" Association="ServiceCallModel.FK__Service_L__User___76C185B7">
+      <End Role="Service_Employee" EntitySet="Service_Employee" />
+      <End Role="Service_Location_Tracking" EntitySet="Service_Location_Tracking" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Service_T__Assig__7A92169B" Association="ServiceCallModel.FK__Service_T__Assig__7A92169B">
+      <End Role="Service_Employee" EntitySet="Service_Employee" />
+      <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Service_Activity">
+    <Key>
+      <PropertyRef Name="Activity_ID" />
+    </Key>
+    <Property Name="Activity_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Screen_Table" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Service_Company">
+    <Key>
+      <PropertyRef Name="Company_id" />
+    </Key>
+    <Property Name="Company_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Email_ID_For_Display" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Service_Customer">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Email_ID" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Service_Ticket" Relationship="ServiceCallModel.FK__Service_T__Custo__799DF262" FromRole="Service_Customer" ToRole="Service_Ticket" />
+  </EntityType>
+  <EntityType Name="Service_Employee">
+    <Key>
+      <PropertyRef Name="Employee_id" />
+    </Key>
+    <Property Name="Employee_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Emplyoyee_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="User_id" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="Date_Of_Joining" Type="DateTime" Precision="0" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="Soft_Delete" Type="Boolean" />
+    <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email_ID" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="User_Type" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Service_Location_Tracking" Relationship="ServiceCallModel.FK__Service_L__User___76C185B7" FromRole="Service_Employee" ToRole="Service_Location_Tracking" />
+    <NavigationProperty Name="Service_Ticket" Relationship="ServiceCallModel.FK__Service_T__Assig__7A92169B" FromRole="Service_Employee" ToRole="Service_Ticket" />
+  </EntityType>
+  <EntityType Name="Service_Location_Tracking">
+    <Key>
+      <PropertyRef Name="Location_Tracking_ID" />
+    </Key>
+    <Property Name="Location_Tracking_ID" Type="Int64" Nullable="false" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Lat" Type="Int64" Nullable="false" />
+    <Property Name="Lon" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Service_Employee" Relationship="ServiceCallModel.FK__Service_L__User___76C185B7" FromRole="Service_Location_Tracking" ToRole="Service_Employee" />
+  </EntityType>
+  <EntityType Name="Service_Ticket">
+    <Key>
+      <PropertyRef Name="Ticket_ID" />
+    </Key>
+    <Property Name="Ticket_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_ID" Type="Int32" Nullable="false" />
+    <Property Name="Assigned_To" Type="Int32" />
+    <Property Name="Ticket_Type" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Ticket_Creation_Date" Type="DateTime" Precision="0" />
+    <Property Name="Narration" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Assigned_Date" Type="DateTime" Precision="0" />
+    <Property Name="Call_Attended_Date" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Narration_By_Engineer" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Service_Customer" Relationship="ServiceCallModel.FK__Service_T__Custo__799DF262" FromRole="Service_Ticket" ToRole="Service_Customer" />
+    <NavigationProperty Name="Service_Employee" Relationship="ServiceCallModel.FK__Service_T__Assig__7A92169B" FromRole="Service_Ticket" ToRole="Service_Employee" />
+  </EntityType>
+  <EntityType Name="Service_User_Access_Table">
+    <Key>
+      <PropertyRef Name="Access_ID" />
+    </Key>
+    <Property Name="Access_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Type" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Add_Ticket" Type="Int32" Nullable="false" />
+    <Property Name="Close_Ticket" Type="Int32" Nullable="false" />
+    <Property Name="Assign_Ticket" Type="Int32" Nullable="false" />
+    <Property Name="Reports" Type="Int32" Nullable="false" />
+    <Property Name="AMC" Type="Int32" Nullable="false" />
+    <Property Name="Employee" Type="Int32" Nullable="false" />
+    <Property Name="Customer" Type="Int32" Nullable="false" />
+    <Property Name="Location_Tracking" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Service_T__Custo__799DF262">
+    <End Role="Service_Customer" Type="ServiceCallModel.Service_Customer" Multiplicity="1" />
+    <End Role="Service_Ticket" Type="ServiceCallModel.Service_Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service_Customer">
+        <PropertyRef Name="Customer_ID" />
+      </Principal>
+      <Dependent Role="Service_Ticket">
+        <PropertyRef Name="Customer_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service_L__User___76C185B7">
+    <End Role="Service_Employee" Type="ServiceCallModel.Service_Employee" Multiplicity="1" />
+    <End Role="Service_Location_Tracking" Type="ServiceCallModel.Service_Location_Tracking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service_Employee">
+        <PropertyRef Name="Employee_id" />
+      </Principal>
+      <Dependent Role="Service_Location_Tracking">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Service_T__Assig__7A92169B">
+    <End Role="Service_Employee" Type="ServiceCallModel.Service_Employee" Multiplicity="0..1" />
+    <End Role="Service_Ticket" Type="ServiceCallModel.Service_Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service_Employee">
+        <PropertyRef Name="Employee_id" />
+      </Principal>
+      <Dependent Role="Service_Ticket">
+        <PropertyRef Name="Assigned_To" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,96 @@
+﻿@model ServiceCallApplication.Models.ProductSearch
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product List</h2>
+
+<p>
+</p>
+@using (Html.BeginForm("Index", "Product", FormMethod.Get))
+{
+    @Html.ValidationSummary(true)
+
+    <table>
+        <tr>
+            <th>Product Id      </th>
+            <td>
+                
+        @Html.TextBox("SearchName")<br /> </td><br>
+           
+            <td>
+               
+                <input name="SearchButton" type="submit" value="Search" title="Search" accesskey="f" class="btn-success" />
+           </td>
+             <td></td>
+        </tr>
+    </table>
+
+    if (Model.ProductVMList != null && Model.ProductVMList.Count > 0)
+    {
+             
+        var grid = new WebGrid(Model.ProductVMList, defaultSort: "expectedClosureDate", canPage: true, rowsPerPage: 50);
+    
+        @grid.GetHtml(tableStyle: "table",
+            headerStyle: "headings",
+            alternatingRowStyle: "even pointer",
+            mode: WebGridPagerModes.All,
+            numericLinksCount: 10,
+
+        columns: grid.Columns(
+        grid.Column("ProductID", "Product ID"),
+         grid.Column("ProductName", " "),
+        grid.Column("ProductName", "Product Name"),
+         grid.Column("ProductName", " "),
+        grid.Column("Price", "Price"),
+        grid.Column("ProductName", " "),
+        grid.Column("ProductDescription", "Product Description"),
+       
+     grid.Column("ProductName", " "),
+       
+        //grid.Column(columnName: "AddedBy", header: "Added By",
+        //format: (item) =>
+        //{
+        //    var Aid = item.AddedBy;
+        //    if (Aid == null)
+        //        return ("");
+        //    else
+        //        return (item.tenantuser.TenantUserName + " (" + item.AddedTime.ToString("dd-MM-yyyy hh:mm t.\\M.") + ")");
+        //}),
+
+        
+        grid.Column(columnName: "ProductID", canSort: false, header: "Actions",
+        format:
+        @<ul class="nav navbar-nav navbar-center">
+            <li class="">
+                <a href="#" data-toggle="dropdown">
+                    <i class="fa fa-ellipsis-v  pull-right"></i>
+
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+
+                   @* <li>@Html.ActionLink(" Edit", "Edit", new { caseInwardAssignmentID = item.caseInwardAssignmentVM.CaseInwardAssignmentID }, new { @class = "fa fa-pencil pull-left" })</li>
+                    
+                     @*<li>@Html.ActionLink(" BusiEdit", "BusiEdit", new { caseInwardAssignmentID = item.caseInwardAssignmentVM.CaseInwardAssignmentID }, new { @class = "fa fa-pencil pull-left" })</li>
+
+                      <li>@Html.ActionLink(" DocEdit", "DocEdit", new { caseInwardAssignmentID = item.caseInwardAssignmentVM.CaseInwardAssignmentID }, new { @class = "fa fa-pencil pull-left" })</li>
+
+                      <li>@Html.ActionLink("TeleEdit", "TeleEdit", new { caseInwardAssignmentID = item.caseInwardAssignmentVM.CaseInwardAssignmentID }, new { @class = "fa fa-pencil pull-left" })</li>
+
+                      *@     <li>@Html.ActionLink("Update Product", "Update", "Home"),  <li>@Html.ActionLink("Delete Product", "Delete", "Home", new { @class = "fa fa-pencil pull-left" })</li>  </ul>
+            </li>
+        </ul>
+
+            )
+
+                )
+                )
+       
+
+    }
+    else
+    {
+        <label>No Data Found</label>
+    }
+}

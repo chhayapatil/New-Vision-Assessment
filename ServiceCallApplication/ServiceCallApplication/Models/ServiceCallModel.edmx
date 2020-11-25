@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ServiceCallModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ServiceCallModelStoreContainer">
+          <EntitySet Name="Service_Activity" EntityType="ServiceCallModel.Store.Service_Activity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_Company" EntityType="ServiceCallModel.Store.Service_Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_Customer" EntityType="ServiceCallModel.Store.Service_Customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_Employee" EntityType="ServiceCallModel.Store.Service_Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_Location_Tracking" EntityType="ServiceCallModel.Store.Service_Location_Tracking" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_Ticket" EntityType="ServiceCallModel.Store.Service_Ticket" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Service_User_Access_Table" EntityType="ServiceCallModel.Store.Service_User_Access_Table" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Service_L__User___76C185B7" Association="ServiceCallModel.Store.FK__Service_L__User___76C185B7">
+            <End Role="Service_Employee" EntitySet="Service_Employee" />
+            <End Role="Service_Location_Tracking" EntitySet="Service_Location_Tracking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Service_T__Assig__7A92169B" Association="ServiceCallModel.Store.FK__Service_T__Assig__7A92169B">
+            <End Role="Service_Employee" EntitySet="Service_Employee" />
+            <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Service_T__Custo__799DF262" Association="ServiceCallModel.Store.FK__Service_T__Custo__799DF262">
+            <End Role="Service_Customer" EntitySet="Service_Customer" />
+            <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Service_Activity">
+          <Key>
+            <PropertyRef Name="Activity_ID" />
+          </Key>
+          <Property Name="Activity_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Screen/Table" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Details" Type="varchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Service_Company">
+          <Key>
+            <PropertyRef Name="Company_id" />
+          </Key>
+          <Property Name="Company_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Email_ID_For_Display" Type="varchar" MaxLength="200" />
+          <Property Name="Logo" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Service_Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Company_Name" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Phone_No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Email_ID" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Service_Employee">
+          <Key>
+            <PropertyRef Name="Employee_id" />
+          </Key>
+          <Property Name="Employee_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Emplyoyee_Name" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="User_id" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Date_Of_Joining" Type="date" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Soft_Delete" Type="bit" />
+          <Property Name="Phone_No" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email_ID" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Photo" Type="varbinary(max)" />
+          <Property Name="User_Type" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Service_Location_Tracking">
+          <Key>
+            <PropertyRef Name="Location_Tracking_ID" />
+          </Key>
+          <Property Name="Location_Tracking_ID" Type="bigint" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="TimeStamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="Phone_No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Lat" Type="bigint" Nullable="false" />
+          <Property Name="Lon" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Service_Ticket">
+          <Key>
+            <PropertyRef Name="Ticket_ID" />
+          </Key>
+          <Property Name="Ticket_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_ID" Type="int" Nullable="false" />
+          <Property Name="Assigned_To" Type="int" />
+          <Property Name="Ticket_Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Ticket_Creation_Date" Type="date" />
+          <Property Name="Narration" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Assigned_Date" Type="date" />
+          <Property Name="Call_Attended_Date" Type="date" />
+          <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Narration_By Engineer" Type="varchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="Service_User_Access_Table">
+          <Key>
+            <PropertyRef Name="Access_ID" />
+          </Key>
+          <Property Name="Access_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="User_Type" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Details" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Add_Ticket" Type="int" Nullable="false" />
+          <Property Name="Close_Ticket" Type="int" Nullable="false" />
+          <Property Name="Assign_Ticket" Type="int" Nullable="false" />
+          <Property Name="Reports" Type="int" Nullable="false" />
+          <Property Name="AMC" Type="int" Nullable="false" />
+          <Property Name="Employee" Type="int" Nullable="false" />
+          <Property Name="Customer" Type="int" Nullable="false" />
+          <Property Name="Location_Tracking" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Service_L__User___76C185B7">
+          <End Role="Service_Employee" Type="ServiceCallModel.Store.Service_Employee" Multiplicity="1" />
+          <End Role="Service_Location_Tracking" Type="ServiceCallModel.Store.Service_Location_Tracking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Employee">
+              <PropertyRef Name="Employee_id" />
+            </Principal>
+            <Dependent Role="Service_Location_Tracking">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Service_T__Assig__7A92169B">
+          <End Role="Service_Employee" Type="ServiceCallModel.Store.Service_Employee" Multiplicity="0..1" />
+          <End Role="Service_Ticket" Type="ServiceCallModel.Store.Service_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Employee">
+              <PropertyRef Name="Employee_id" />
+            </Principal>
+            <Dependent Role="Service_Ticket">
+              <PropertyRef Name="Assigned_To" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Service_T__Custo__799DF262">
+          <End Role="Service_Customer" Type="ServiceCallModel.Store.Service_Customer" Multiplicity="1" />
+          <End Role="Service_Ticket" Type="ServiceCallModel.Store.Service_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Customer">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Service_Ticket">
+              <PropertyRef Name="Customer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ServiceCallModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ServiceCallEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Service_Activity" EntityType="ServiceCallModel.Service_Activity" />
+          <EntitySet Name="Service_Company" EntityType="ServiceCallModel.Service_Company" />
+          <EntitySet Name="Service_Customer" EntityType="ServiceCallModel.Service_Customer" />
+          <EntitySet Name="Service_Employee" EntityType="ServiceCallModel.Service_Employee" />
+          <EntitySet Name="Service_Location_Tracking" EntityType="ServiceCallModel.Service_Location_Tracking" />
+          <EntitySet Name="Service_Ticket" EntityType="ServiceCallModel.Service_Ticket" />
+          <EntitySet Name="Service_User_Access_Table" EntityType="ServiceCallModel.Service_User_Access_Table" />
+          <AssociationSet Name="FK__Service_T__Custo__799DF262" Association="ServiceCallModel.FK__Service_T__Custo__799DF262">
+            <End Role="Service_Customer" EntitySet="Service_Customer" />
+            <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Service_L__User___76C185B7" Association="ServiceCallModel.FK__Service_L__User___76C185B7">
+            <End Role="Service_Employee" EntitySet="Service_Employee" />
+            <End Role="Service_Location_Tracking" EntitySet="Service_Location_Tracking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Service_T__Assig__7A92169B" Association="ServiceCallModel.FK__Service_T__Assig__7A92169B">
+            <End Role="Service_Employee" EntitySet="Service_Employee" />
+            <End Role="Service_Ticket" EntitySet="Service_Ticket" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Service_Activity">
+          <Key>
+            <PropertyRef Name="Activity_ID" />
+          </Key>
+          <Property Name="Activity_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Screen_Table" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Service_Company">
+          <Key>
+            <PropertyRef Name="Company_id" />
+          </Key>
+          <Property Name="Company_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Email_ID_For_Display" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Service_Customer">
+          <Key>
+            <PropertyRef Name="Customer_ID" />
+          </Key>
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Company_Name" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Email_ID" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Service_Ticket" Relationship="ServiceCallModel.FK__Service_T__Custo__799DF262" FromRole="Service_Customer" ToRole="Service_Ticket" />
+        </EntityType>
+        <EntityType Name="Service_Employee">
+          <Key>
+            <PropertyRef Name="Employee_id" />
+          </Key>
+          <Property Name="Employee_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Emplyoyee_Name" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="User_id" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Date_Of_Joining" Type="DateTime" Precision="0" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Soft_Delete" Type="Boolean" />
+          <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Email_ID" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="User_Type" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Service_Location_Tracking" Relationship="ServiceCallModel.FK__Service_L__User___76C185B7" FromRole="Service_Employee" ToRole="Service_Location_Tracking" />
+          <NavigationProperty Name="Service_Ticket" Relationship="ServiceCallModel.FK__Service_T__Assig__7A92169B" FromRole="Service_Employee" ToRole="Service_Ticket" />
+        </EntityType>
+        <EntityType Name="Service_Location_Tracking">
+          <Key>
+            <PropertyRef Name="Location_Tracking_ID" />
+          </Key>
+          <Property Name="Location_Tracking_ID" Type="Int64" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="TimeStamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="Phone_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Lat" Type="Int64" Nullable="false" />
+          <Property Name="Lon" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Service_Employee" Relationship="ServiceCallModel.FK__Service_L__User___76C185B7" FromRole="Service_Location_Tracking" ToRole="Service_Employee" />
+        </EntityType>
+        <EntityType Name="Service_Ticket">
+          <Key>
+            <PropertyRef Name="Ticket_ID" />
+          </Key>
+          <Property Name="Ticket_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer_ID" Type="Int32" Nullable="false" />
+          <Property Name="Assigned_To" Type="Int32" />
+          <Property Name="Ticket_Type" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Ticket_Creation_Date" Type="DateTime" Precision="0" />
+          <Property Name="Narration" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Assigned_Date" Type="DateTime" Precision="0" />
+          <Property Name="Call_Attended_Date" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Narration_By_Engineer" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Service_Customer" Relationship="ServiceCallModel.FK__Service_T__Custo__799DF262" FromRole="Service_Ticket" ToRole="Service_Customer" />
+          <NavigationProperty Name="Service_Employee" Relationship="ServiceCallModel.FK__Service_T__Assig__7A92169B" FromRole="Service_Ticket" ToRole="Service_Employee" />
+        </EntityType>
+        <EntityType Name="Service_User_Access_Table">
+          <Key>
+            <PropertyRef Name="Access_ID" />
+          </Key>
+          <Property Name="Access_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="User_Type" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Add_Ticket" Type="Int32" Nullable="false" />
+          <Property Name="Close_Ticket" Type="Int32" Nullable="false" />
+          <Property Name="Assign_Ticket" Type="Int32" Nullable="false" />
+          <Property Name="Reports" Type="Int32" Nullable="false" />
+          <Property Name="AMC" Type="Int32" Nullable="false" />
+          <Property Name="Employee" Type="Int32" Nullable="false" />
+          <Property Name="Customer" Type="Int32" Nullable="false" />
+          <Property Name="Location_Tracking" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Service_T__Custo__799DF262">
+          <End Role="Service_Customer" Type="ServiceCallModel.Service_Customer" Multiplicity="1" />
+          <End Role="Service_Ticket" Type="ServiceCallModel.Service_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Customer">
+              <PropertyRef Name="Customer_ID" />
+            </Principal>
+            <Dependent Role="Service_Ticket">
+              <PropertyRef Name="Customer_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Service_L__User___76C185B7">
+          <End Role="Service_Employee" Type="ServiceCallModel.Service_Employee" Multiplicity="1" />
+          <End Role="Service_Location_Tracking" Type="ServiceCallModel.Service_Location_Tracking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Employee">
+              <PropertyRef Name="Employee_id" />
+            </Principal>
+            <Dependent Role="Service_Location_Tracking">
+              <PropertyRef Name="User_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Service_T__Assig__7A92169B">
+          <End Role="Service_Employee" Type="ServiceCallModel.Service_Employee" Multiplicity="0..1" />
+          <End Role="Service_Ticket" Type="ServiceCallModel.Service_Ticket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service_Employee">
+              <PropertyRef Name="Employee_id" />
+            </Principal>
+            <Dependent Role="Service_Ticket">
+              <PropertyRef Name="Assigned_To" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ServiceCallModelStoreContainer" CdmEntityContainer="ServiceCallEntities">
+          <EntitySetMapping Name="Service_Activity">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Activity">
+              <MappingFragment StoreEntitySet="Service_Activity">
+                <ScalarProperty Name="Activity_ID" ColumnName="Activity_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Screen_Table" ColumnName="Screen/Table" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_Company">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Company">
+              <MappingFragment StoreEntitySet="Service_Company">
+                <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email_ID_For_Display" ColumnName="Email_ID_For_Display" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_Customer">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Customer">
+              <MappingFragment StoreEntitySet="Service_Customer">
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_Employee">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Employee">
+              <MappingFragment StoreEntitySet="Service_Employee">
+                <ScalarProperty Name="Employee_id" ColumnName="Employee_id" />
+                <ScalarProperty Name="Emplyoyee_Name" ColumnName="Emplyoyee_Name" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Date_Of_Joining" ColumnName="Date_Of_Joining" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Soft_Delete" ColumnName="Soft_Delete" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_Location_Tracking">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Location_Tracking">
+              <MappingFragment StoreEntitySet="Service_Location_Tracking">
+                <ScalarProperty Name="Location_Tracking_ID" ColumnName="Location_Tracking_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_Ticket">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_Ticket">
+              <MappingFragment StoreEntitySet="Service_Ticket">
+                <ScalarProperty Name="Ticket_ID" ColumnName="Ticket_ID" />
+                <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+                <ScalarProperty Name="Assigned_To" ColumnName="Assigned_To" />
+                <ScalarProperty Name="Ticket_Type" ColumnName="Ticket_Type" />
+                <ScalarProperty Name="Ticket_Creation_Date" ColumnName="Ticket_Creation_Date" />
+                <ScalarProperty Name="Narration" ColumnName="Narration" />
+                <ScalarProperty Name="Assigned_Date" ColumnName="Assigned_Date" />
+                <ScalarProperty Name="Call_Attended_Date" ColumnName="Call_Attended_Date" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Narration_By_Engineer" ColumnName="Narration_By Engineer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service_User_Access_Table">
+            <EntityTypeMapping TypeName="ServiceCallModel.Service_User_Access_Table">
+              <MappingFragment StoreEntitySet="Service_User_Access_Table">
+                <ScalarProperty Name="Access_ID" ColumnName="Access_ID" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Add_Ticket" ColumnName="Add_Ticket" />
+                <ScalarProperty Name="Close_Ticket" ColumnName="Close_Ticket" />
+                <ScalarProperty Name="Assign_Ticket" ColumnName="Assign_Ticket" />
+                <ScalarProperty Name="Reports" ColumnName="Reports" />
+                <ScalarProperty Name="AMC" ColumnName="AMC" />
+                <ScalarProperty Name="Employee" ColumnName="Employee" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Location_Tracking" ColumnName="Location_Tracking" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

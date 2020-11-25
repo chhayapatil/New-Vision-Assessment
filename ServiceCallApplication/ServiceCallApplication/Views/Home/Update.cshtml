@@ -1,0 +1,133 @@
+﻿@model ServiceCallApplication.Models.ViewModel.ProductVM
+@{
+    ViewBag.Title = "Update";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+   
+</article>
+
+<h2></h2>
+
+
+
+@{
+    ViewBag.Title = "Product";
+    ViewBag.PanelHeading = "Product > Update";
+    ViewBag.BackToList = @Html.ActionLink("Back To List", "Index");
+    ViewBag.Back = "Product";
+    var UserID = Session["LogedUserID"];
+}
+@{
+    var error = TempData["ErrorMsg"];  
+}
+
+
+<h2>Update Product</h2>
+<legend></legend>
+
+ 
+
+
+
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+        <table class="table">
+        <tr>
+           
+            
+       
+            <td style="width:50%">
+
+                 <div class="row">
+                    <div class="col-sm-5 text left">
+                        <b>Product ID*</b>
+                    </div>
+                    <div>
+                        @Html.TextBoxFor(model => model.ProductID, new { @class = "ProductID input-sm", style = "width: 50%", id = "ProductID" })
+                    </div>
+                </div>
+
+                
+            </td>
+             <td style="width:50%">
+                <div class="row">
+                    <div class="col-sm-5 text left">
+                        <b>@Html.DisplayFor(model => model.ProductName) Product Name*</b>
+                    </div>
+                    <div>
+                        @Html.TextBoxFor(a => Model.ProductName, new { @type = "input", @class = "Entity input-sm", style = "width: 50%", id = "EntityName", required = "required" })
+                    </div>
+                </div>
+               
+            </td>
+            </tr>
+            <tr>
+           
+
+
+
+
+       
+            <td style="width:50%">
+                <div class="row">
+                    <div class="col-sm-5 text left">
+                        <b>Price*</b>
+                    </div>
+                   <div>
+                        @Html.TextBoxFor(a => Model.Price, new { @type = "input", @class = "Entity input-sm", style = "width: 50%", id = "EntityName", required = "required" })
+                    </div>
+                </div>
+            </td>
+           <td style="width:50%">
+                <div class="row">
+                    <div class="col-sm-5 text left">
+                        <b>Product Description *</b>
+                    </div>
+                   <div>
+                        @Html.TextBoxFor(a => Model.ProductDescription, new { @type = "input", @class = "Entity input-sm", style = "width: 50%", id = "EntityName", required = "required" })
+                    </div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+  
+       
+         <td><b>Add Bills</b>
+
+                </td>
+
+                <td>
+
+                    <input type="file" name="fileUploader" />
+
+                </td>
+
+           
+
+      
+          
+</tr>
+             <tr>
+           <td style ="width:50%">
+                <div class="row">
+                    <input type="submit" value="Update" id="submitBtn"/>
+                </div>
+
+                </td>
+
+            </tr>
+    </table>
+}
+
+
+<div>
+    @Html.ActionLink("Back to Home", "Index")
+</div>
